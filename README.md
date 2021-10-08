@@ -6,7 +6,12 @@ Macro python pour libreoffice/openoffice permettant de récupérer la phonétiqu
 
 #### Linux : 
 
- - Mettre le script dans le répertoire `.config/libreoffice/4/user/Scripts/python/`
+ - Mettre le script dans le répertoire `$HOME/.config/libreoffice/4/user/Scripts/python/`
+ - Ajouter un raccourci clavier libreoffice exécutant la fonction `insert_phonetic()`
+
+#### Windows :
+
+ - Mettre le script dans le répertoire `%APPDATA%\LibreOffice\4\user\Scripts\python`
  - Ajouter un raccourci clavier libreoffice exécutant la fonction `insert_phonetic()`
 
 #### TODO
