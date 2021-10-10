@@ -82,7 +82,7 @@ class Document():
 		response = getPhonetic(word.lower(), "English")
 		if response == NetworkError :
 			msgbox("You are not connected to the Internet, or wordreference.com is not reachable")
-			return ""
+			return NetworkError
 		elif response == WordNotFoundError:
 			msgbox(f"Can't find phonetic for \"{word}\" ")
 			return ""
@@ -125,6 +125,9 @@ def insert_phonetic():
 				new_selection.append(i)
 
 	for i in new_selection :
-		doc.insert_text(doc.get_phonetic(i))
+		text = doc.get_phonetic(i)
+		if text == NetworkError: 
+			break
+		doc.insert_text(text)
 
 #subprocess.call(["nohup", "soffice", "--writer", "--accept=\"socket,host=localhost,port=2002;urp;StarOffice.ServiceManager\""])
