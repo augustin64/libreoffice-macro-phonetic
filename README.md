@@ -2,7 +2,14 @@
 
 Macro python pour libreoffice/openoffice permettant de récupérer la phonétique d'un mot depuis wordreference.com et la coller dans le document actif (Les scripts et docs sont basés sur libreoffice mais peuvent être réadaptés pour openoffice)
 
+### Dépendances :
+
++ Python 3.x (afin d'exécuter le script)
++ Un Runtime Java (afin de faire le pont entre libreoffice et python)
+
 ### Installation :
+
++ Télécharger le dossier contenant le code avec le bouton `Code` > `Download ZIP`
 
 #### 🐧 Linux : 
 
@@ -20,7 +27,7 @@ Macro python pour libreoffice/openoffice permettant de récupérer la phonétiqu
  - Ajouter un raccourci clavier libreoffice exécutant la fonction `insert_phonetic()`
 
 ### 🐞 Bugs connus
- - Quand l'ordinateur est connecté à un réseau sans avoir d'accès à Internet, libreoffice freeze pendant une quinzaine de secondes
+ - Quand l'ordinateur est connecté à un réseau sans avoir d'accès à Internet, et que le raccourci est ancé, libreoffice freeze pendant une quinzaine de secondes (attend un `TimeOut`)
 - La phonétique d'un mot n'est pas rajoutée après, mais avant lui
 
 ### ☑ TODO
